@@ -1,0 +1,204 @@
+/*** ESSENTIAL STYLES ***/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.sf-menu > li {
+	float: left;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+
+/*** DEMO SKIN ***/
+.sf-menu {
+	float: left;
+	margin-bottom: 0;
+}
+.sf-menu ul {
+	min-width: 12em; /* allow long menu items to determine submenu width */
+	*width: 12em; /* no auto sub width for IE7, see white-space comment below */
+}
+.sf-menu a {
+	padding: .75em 1em;
+	text-decoration: none;
+	zoom: 1; /* IE7 */
+}
+.sf-menu li {
+	white-space: nowrap; /* no need for Supersubs plugin */
+	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
+	-webkit-transition: background .2s;
+	transition: background .2s;
+}
+.sf-menu ul li {
+	background: #AABDE6;
+}
+.sf-menu ul ul li {
+	background: #9AAEDB;
+}
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+	background: #CFDEFF;
+	/* only transition out, not in */
+	-webkit-transition: none;
+	transition: none;
+}
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: white; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}
+/*moblie menu*/
+
+.mobile-menu {
+	display: none;
+	position: relative;
+	z-index: 9999
+}
+.mobile-menu > span {
+	cursor: pointer;
+	margin-left: 20px;
+	display: block;
+}
+.mobile-menu > span:hover,
+.mobile-menu > span.active {
+	color: #000;
+}
+.mobile-menu .toggle-view-menu {
+	display: none;
+	padding-left: 0;
+	margin: 0;
+	position: absolute;
+	top: 100%;
+	background: #ccc;
+	min-width: 100%;
+}
+.mobile-menu .toggle-view-menu li {
+	list-style: none;
+}
+.mobile-menu .toggle-view-menu a {
+	text-decoration: none;
+	color: #fff;
+}
+.mobile-menu .toggle-view-menu a:focus {
+	border: none;
+}
+.mobile-menu .toggle-view-menu span {
+	margin: 0;
+	position: relative;
+	cursor: pointer;
+	font-size: 12px;
+	padding-left: 20px;
+	background: #454545;
+	color: #fff;
+}
+
+.mobile-menu .toggle-view-menu span a:hover {
+}
+.mobile-menu .toggle-view-menu span:focus {
+	border: none;
+}
+.mobile-menu .toggle-view-menu span span {
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 40px;
+}
+.mobile-menu .toggle-view-menu a {
+	display: inline-block;
+	line-height: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #fff;
+}
+
+.mobile-menu .toggle-view-menu ul {
+	padding-left: 20px
+}
+.mobile-menu .toggle-view-menu li {
+}
+.mobile-menu .toggle-view-menu ul li {
+	list-style: disc inside;
+	color: #fff
+}
+.mobile-menu .toggle-view-menu ul li a {
+	padding: 0;
+	line-height: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.mobile-menu .toggle-view-menu > li {
+	border-top: 1px solid #ccc;
+}
+.mobile-menu .toggle-view-menu > li:first-child {
+	border-top: none;
+}
+.mobile-menu .toggle-view-menu div.menu-panel {
+	display: none;
+}

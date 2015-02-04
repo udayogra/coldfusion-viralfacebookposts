@@ -1,0 +1,28 @@
+ {
+  "rules" : [{
+            "security" :
+                          [            
+	                    {
+		              "name":"major",
+		              "description":
+			                     {
+					       "title": "major tasks to be done",
+					       "problemstatement": "problem statement of error",
+					       "sideeffects": "side effects of error",
+					       "solution": "solution of error"
+					     }
+			     },
+		             {
+		              "name":"minor",
+			      "description":
+			                     {
+					       "title": "minor tasks to be done",
+					       "problemstatement": "problem statement of error",
+					       "sideeffects": "side effects of error",
+					       "solution": "solution of error"
+					     }
+			    
+			     }
+			   ]      
+	    }]
+ }

@@ -1,0 +1,23 @@
+ {
+  "rules" : [{
+            "security" :
+                          [            
+	                    {
+		              "name":"major",
+		              "description":
+			                     {
+					       "title": "major tasks to be done"
+					      
+					     }
+			     },
+		             {
+		              "name":"minor",
+			      "description":
+			                     {
+					       "title": "minor tasks to be done"
+					     }
+			    
+			     }
+			   ]      
+	    }]
+ }
